@@ -7,8 +7,8 @@ const profileResult = document.getElementById("profileResult");
 const saveBadge = document.getElementById("saveBadge");
 const savedProfiles = document.getElementById("savedProfiles");
 
-const sampleResume = `A. Ramcharan
-Email: ramcharan@example.com | Phone: +91 90000 00000
+const sampleResume = `Rakshitha
+Email: rakshitha@example.com | Phone: +91 90000 00000
 Professional Summary
 Computer Science undergraduate specializing in Generative AI, interested in machine learning, NLP, and building practical AI applications.
 

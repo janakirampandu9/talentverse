@@ -10,32 +10,60 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="topbar">
-    <div class="container topbar-inner">
+  <div class="app-shell">
+    <aside class="sidebar">
       <a class="brand" href="/" aria-label="TalentVerse home">
         <span class="brand-mark" aria-hidden="true">T</span>
         <span>TalentVerse</span>
       </a>
-      <nav class="topnav" aria-label="Sections">
-        <a href="#intake">Intake</a>
-        <a href="#tools">Career tools</a>
-        <a href="#saved">Saved profiles</a>
+      <div class="sidebar-label">Workspace</div>
+      <nav class="side-nav" aria-label="Sections">
+        <a class="active" href="#overview"><span class="nav-icon">⌂</span>Overview</a>
+        <a href="#intake"><span class="nav-icon">＋</span>Build profile</a>
+        <a href="#tools"><span class="nav-icon">↗</span>Career tools</a>
+        <a href="#saved"><span class="nav-icon">▣</span>Saved profiles</a>
       </nav>
-      <span id="aiStatus" class="pill" title="Checking AI configuration…"><span class="dot"></span><span id="aiStatusText">Checking…</span></span>
-    </div>
-  </header>
+      <div class="sidebar-footer">
+        <div class="sidebar-next"><span>✦</span><strong>Your next step</strong><small>Start with a resume or audio introduction to unlock personalized career insights.</small><a href="#intake">Create a profile →</a></div>
+        <div class="sidebar-help">CA3 · Generative AI Foundations</div>
+        <span id="aiStatus" class="pill" title="Checking AI configuration…"><span class="dot"></span><span id="aiStatusText">Checking…</span></span>
+      </div>
+    </aside>
 
-  <main id="main" class="container">
-    <section class="intro">
-      <h1>Skills &amp; career intelligence</h1>
-      <p>Turn a resume or spoken introduction into a structured profile, then use it to map skill gaps, compare against job descriptions, plan portfolio projects and learn from interview practice.</p>
-    </section>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="topbar-inner">
+          <div class="mobile-brand">
+            <span class="brand-mark" aria-hidden="true">T</span>
+            <span>TalentVerse</span>
+          </div>
+          <div class="breadcrumb"><span>Workspace</span><strong>/</strong><span>Overview</span></div>
+          <div class="topbar-meta">Career intelligence workspace</div>
+          <span id="aiStatusTop" class="top-status"><span class="dot"></span><span>AI ready</span></span>
+        </div>
+      </header>
 
-    <section id="intake" class="workspace" aria-label="Profile intake">
+      <main id="main" class="container">
+        <section id="overview" class="intro hero">
+          <div>
+            <p class="eyebrow">YOUR CAREER, IN FOCUS</p>
+            <h1>Turn your experience into your next opportunity.</h1>
+            <p class="intro-copy">Build your skills profile, find your next learning goal, and make your career story work harder for you.</p>
+          </div>
+          <a class="intro-action" href="#intake">Build my profile <span>→</span></a>
+        </section>
+
+        <section class="overview-grid" aria-label="Workspace overview">
+          <div class="overview-card"><span class="overview-icon">✦</span><span><strong>5</strong><small>AI workflows</small></span></div>
+          <div class="overview-card"><span class="overview-icon">✓</span><span><strong>Validated</strong><small>Structured results</small></span></div>
+          <div class="overview-card"><span class="overview-icon">▣</span><span><strong>SQLite storage</strong><small>Profiles saved in database</small></span></div>
+        </section>
+
+        <section id="intake" class="workspace" aria-label="Profile intake">
       <div class="card input-panel">
         <header class="card-head">
-          <div><span class="step">1</span><h2>Intake</h2></div>
-          <span class="meta">Text or audio</span>
+      <div><span class="step">01</span><h2>Build your profile</h2></div>
+      <span class="meta">TEXT OR<br>AUDIO</span>
         </header>
         <p class="hint">Avoid submitting information you do not want processed by an external AI service.</p>
 
@@ -59,7 +87,7 @@
 
       <div class="card results-panel">
         <header class="card-head">
-          <div><span class="step">2</span><h2>Structured profile</h2></div>
+          <div><span class="step">02</span><h2>Your profile</h2></div>
           <span id="saveBadge" class="badge">Awaiting input</span>
         </header>
         <div id="emptyState" class="empty-state">
@@ -70,9 +98,9 @@
         </div>
         <div id="profileResult" class="profile-result hidden"></div>
       </div>
-    </section>
+        </section>
 
-    <section id="tools" class="card section-card" aria-label="Career tools">
+        <section id="tools" class="card section-card" aria-label="Career tools">
       <header class="card-head">
         <div><span class="step">3</span><h2>Career tools</h2></div>
         <span id="activeProfile" class="badge">No profile selected</span>
@@ -95,23 +123,25 @@
         </div>
         <div id="toolResult" class="profile-result tool-result" aria-live="polite"><p class="hint">Results appear here and are saved to the database.</p></div>
       </div>
-    </section>
+        </section>
 
-    <section id="saved" class="card section-card" aria-label="Saved profiles">
+        <section id="saved" class="card section-card" aria-label="Saved profiles">
       <header class="card-head">
         <div><span class="step">4</span><h2>Saved profiles</h2></div>
         <button id="refreshBtn" class="btn btn-ghost" type="button">Refresh</button>
       </header>
       <p class="hint">Loaded from the database, not kept in the browser.</p>
       <div id="savedProfiles" class="saved-profiles"><div class="loading-line">Loading saved profiles…</div></div>
-    </section>
+        </section>
 
-    <footer class="footer">
+        <footer class="footer">
       <span class="footer-brand">TalentVerse</span>
       <span>CA3 · Generative AI Foundations</span>
       <span>AI-assisted extraction · human review recommended</span>
-    </footer>
-  </main>
+        </footer>
+      </main>
+    </div>
+  </div>
   <script src="/static/app.js"></script>
 </body>
 </html>
